@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Rainbow Gradient Animation - Top */
+.rainbow-gradient-top {
+  background: linear-gradient(
+    to right,
+    rgba(124, 185, 233, 0.7),
+    rgba(204, 227, 250, 0.7),
+    rgba(19, 181, 234, 0.7),
+    rgba(74, 243, 153, 0.7),
+    rgba(0, 172, 80, 0.7),
+    rgba(124, 185, 233, 0.7)
+  );
+  background-size: 400% 100%;
+  animation: rainbow-shift 15s linear infinite;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+}
+
+/* Rainbow Gradient Animation - Bottom */
+.rainbow-gradient-bottom {
+  background: linear-gradient(
+    to right,
+    rgba(124, 185, 233, 0.7),
+    rgba(204, 227, 250, 0.7),
+    rgba(19, 181, 234, 0.7),
+    rgba(74, 243, 153, 0.7),
+    rgba(0, 172, 80, 0.7),
+    rgba(124, 185, 233, 0.7)
+  );
+  background-size: 400% 100%;
+  animation: rainbow-shift 15s linear infinite;
+  animation-delay: -7.5s; /* Offset animation for variety */
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+}
+
+/* Rainbow Gradient Continuation (Programmable Section) */
+.rainbow-gradient-continuation {
+  background: linear-gradient(
+    to right,
+    rgba(124, 185, 233, 0.7),
+    rgba(204, 227, 250, 0.7),
+    rgba(19, 181, 234, 0.7),
+    rgba(74, 243, 153, 0.7),
+    rgba(0, 172, 80, 0.7),
+    rgba(124, 185, 233, 0.7)
+  );
+  background-size: 400% 100%;
+  animation: rainbow-shift 15s linear infinite;
+  animation-delay: -7.5s;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+}
+
+@keyframes rainbow-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Section Transition Gradients */
+.section-transition-gradient {
+  background: linear-gradient(to bottom, transparent, white);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.section-transition-gradient-top {
+  background: linear-gradient(
+    to bottom,
+    rgba(124, 185, 233, 0.8) 0%,
+    rgba(204, 227, 250, 0.6) 20%,
+    rgba(19, 181, 234, 0.4) 40%,
+    rgba(74, 243, 153, 0.2) 60%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  background-size: 400% 100%;
+  animation: rainbow-shift 15s linear infinite;
+  animation-delay: -7.5s;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Gradient Button - No Border Radius */
+.gradient-button {
+  background: linear-gradient(45deg, #2da2ff, #13b5ea, #0073e6, #2da2ff);
+  background-size: 300% 300%;
+  animation: gradient-shift 3s ease infinite;
+  border: none;
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+
+.gradient-button:hover {
+  animation-duration: 1.5s;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(45, 162, 255, 0.3);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navigation Link Hover Effects */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #2da2ff, #13b5ea);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #2da2ff !important;
+  transform: translateY(-1px);
+}
+
+/* Hover Button Effects */
+.hover-button {
+  border-radius: 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hover-button:hover::before {
+  left: 100%;
+}
+
+.hover-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Scale Hover Effect */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Float Effect for Data Overlays */
+.hover-float {
+  transition: all 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove all border radius globally */
+button,
+.btn,
+input,
+textarea,
+select {
+  border-radius: 0 !important;
+}
+
+/* Animated Hamburger Menu */
+.hamburger-button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger .line:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger .line:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger .line:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.active .line:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+  width: 0%;
+}
+
+.hamburger.active .line:nth-child(3) {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Menu Backdrop - Smooth Transition */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.mobile-menu-backdrop.active {
+  backdrop-filter: blur(12px);
+}
