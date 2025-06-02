@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useState, useEffect } from "react"
+import { useWindowWidth } from '@/hooks/use-window-width'
 
 type UseCase = {
   description: string;
@@ -26,6 +27,10 @@ export default function UseCasesSection() {
   const [selectedUseCase, setSelectedUseCase] = useState<string>(useCases[0])
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [showTableOnMobile, setShowTableOnMobile] = useState(false)
+
+  const width = useWindowWidth()
+  const isLargeScreen = width ? width >= 1024 : false
+  const isSmallScreen = width ? width < 1024 : false
 
   const useCaseData: UseCaseData = {
     "TRUSTLESS TOURNAMENTS": {
@@ -145,7 +150,7 @@ export default function UseCasesSection() {
             </div>
 
             {/* Components Table (Visible on lg and up within this column) */}
-            {window.innerWidth >= 1024 && (
+            {isLargeScreen && (
               <div className="relative" style={{minHeight: "400px"}}>
                 <div className={`bg-white shadow-sm overflow-hidden transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`} style={{border: "1px solid #000000"}}>
                   {/* Table Header */}
@@ -189,7 +194,7 @@ export default function UseCasesSection() {
               </div>
             </div>
             {/* Learn More/View Less Button for Mobile */}
-             {window.innerWidth < 1024 && (
+             {isSmallScreen && (
                <div
                  className="mt-8 text-[#13b5ea] cursor-pointer flex items-center"
                  onClick={() => setShowTableOnMobile(!showTableOnMobile)}
@@ -201,7 +206,7 @@ export default function UseCasesSection() {
         </div>
 
         {/* Components Table (Visible on mobile below the grid with smooth expand transition) */}
-        {window.innerWidth < 1024 && (
+        {isSmallScreen && (
           <div className={`relative mt-8 px-6 lg:px-12 transition-all duration-500 ease-in-out overflow-hidden ${showTableOnMobile ? 'max-h-[1000px]' : 'max-h-0'}`}>
              <div className={`bg-white shadow-sm overflow-hidden transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`} style={{border: "1px solid #000000"}}>
                {/* Table Header */}
