@@ -17,7 +17,7 @@ export default function CouncilMembers() {
       name: "GOTHAM\nCHOPRA",
       title: "RELIGION OF SPORTS",
       description: "American sports documentarian, media entrepreneur, and author with extensive industry connections.\\n\\nAmerican sports documentarian, media entrepreneur, and author with extensive industry connections.",
-      image: "/images/council/gotham-chopra.jpg", // Assuming .jpg extension
+      image: "/images/council/Gotham-Chopra.jpg", // Assuming .jpg extension
       alt: "Gotham Chopra",
     },
     {
@@ -25,7 +25,7 @@ export default function CouncilMembers() {
       name: "ANDREW\nLAUCK",
       title: "MAPLE PARK CAPITAL",
       description: "Managing Partner with extensive experience in private equity and investment banking.\\n\\nManaging Partner with extensive experience in private equity and investment banking.",
-      image: "/images/council/andrew-lauck.jpg", // Assuming .jpg extension
+      image: "/images/council/Andrew-Lauck.jpg", // Assuming .jpg extension
       alt: "Andrew Lauck",
     },
     {
@@ -33,7 +33,7 @@ export default function CouncilMembers() {
       name: "NIKHIL\nBAHEL",
       title: "ELYSIAN PARK VENTURES",
       description: "Seasoned advisor and investor in sports, media, entertainment, and technology sectors.\\n\\nSeasoned advisor and investor in sports, media, entertainment, and technology sectors.",
-      image: "/images/council/nikhil-bahel.jpg", // Assuming .jpg extension
+      image: "/images/council/Nikhil-Bahel.jpg", // Assuming .jpg extension
       alt: "Nikhil Bahel",
     },
     {
@@ -41,7 +41,7 @@ export default function CouncilMembers() {
       name: "TEAM\nOMG",
       title: "WORLD BOWLING LEAGUE",
       description: "World Series Champion Mookie Betts and business partner Cam Lewis are stepping up to the lane with Team OMG. \\n\\nTeam OMG Blending MLB precision and a lifelong love for bowling in the innovative the World Bowling League.",
-      image: "/images/council/team-omg.jpg", // Assuming .jpg extension
+      image: "/images/council/Team-OMG.jpg", // Assuming .jpg extension
       alt: "Team OMG",
     },
     {
@@ -49,7 +49,7 @@ export default function CouncilMembers() {
       name: "SOURAV\nGHOSAL",
       title: "PRO SQUASH PLAYER",
       description: "Olympic athlete and professional squash player representing India on the global stage with multiple championship titles.\\n\\nOlympic athlete and professional squash player representing India on the global stage with multiple championship titles.",
-      image: "/images/council/sourav-ghosal.jpg", // Assuming .jpg extension
+      image: "/images/council/Sourav-Ghosal.jpg", // Assuming .jpg extension
       alt: "Sourav Ghosal",
     },
     {
