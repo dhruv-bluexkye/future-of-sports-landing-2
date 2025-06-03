@@ -2,12 +2,11 @@ export default function StatsSection() {
   return (
     <section className="py-20 px-6 lg:px-12 bg-white relative overflow-hidden">
       {/* Background Gradient Placeholder */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#e0f7fa] to-transparent z-0"></div> {/* Placeholder gradient */}
 
       {/* Adjusted grid for mobile stacking and desktop columns */}
       <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
         {/* Left Content: Text and Stats (Order adjusted for mobile) */}
-        <div className="order-2 lg:order-1">
+        <div className="order-1 lg:order-1">
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#4d4d4d] mb-8 leading-tight">
             In the age of AI, FSP is a network of real athletes and
            
@@ -76,7 +75,7 @@ export default function StatsSection() {
         </div>
 
         {/* Right Content: Image (Order adjusted for mobile) */}
-        <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+        <div className="order-2 lg:order-2 flex justify-center lg:justify-end">
           <img
             src="/images/globe.png"
             alt="Global sports network represented by a globe"

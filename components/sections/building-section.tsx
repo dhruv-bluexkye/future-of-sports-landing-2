@@ -1,6 +1,6 @@
 export default function BuildingSection() {
   return (
-    <section className="py-20 px-6 lg:px-12 bg-gradient-to-b from-white to-[#f0f9ff] relative overflow-hidden">
+    <section className="py-20 px-6 lg:px-12 border-b border-black relative overflow-hidden">
       {/* Bottom Wave Pattern */}
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">

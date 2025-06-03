@@ -25,11 +25,8 @@ export default function Footer() {
         <div>
           <h4 className="text-gray-500 text-sm font-semibold mb-4">Explore</h4>
           <ul className="space-y-2">
-            <li><Link href="#" className="text-[#4d4d4d] hover:underline">Home</Link></li>
-            <li><Link href="#" className="text-[#4d4d4d] hover:underline">Council</Link></li>
-            <li><Link href="#" className="text-[#4d4d4d] hover:underline">Sports OS</Link></li>
-            <li><Link href="#" className="text-[#4d4d4d] hover:underline">Earn</Link></li>
-            <li><Link href="#" className="text-[#4d4d4d] hover:underline">Create</Link></li>
+            <li><Link href="/" className="text-[#4d4d4d] hover:underline">Home</Link></li>
+            <li><Link href="/council" className="text-[#4d4d4d] hover:underline">Council</Link></li>
           </ul>
         </div>
       </div>
