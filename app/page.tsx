@@ -29,7 +29,7 @@ export default function Home() {
         <UseCasesSection />
         <StatsSection />
         <div
-          className="relative w-full h-72 -mt-20 mb-0 z-20"
+          className="relative w-full h-72 -mt-20 -mb-20 z-20"
           style={{
             opacity: "0.7",
           }}

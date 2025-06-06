@@ -104,7 +104,7 @@ export default function UseCasesSection() {
 
         <div className="grid lg:grid-cols-2 gap-0 items-start" style={{border: "1px solid #000000"}}>
           {/* Left - Use Cases and Description (always visible) */}
-          <div className="space-y-8 lg:border-r lg:border-b-0 border-b border-[#000000]" style={{padding: "40px 0"}}>
+          <div className="space-y-8" style={{padding: "40px 24px"}}>
             {/* Use Cases Tags */}
             <div className="mb-4">
               <h3 className="text-base sm:text-lg font-medium text-[#4d4d4d] mb-4">Use Cases</h3>
@@ -151,7 +151,7 @@ export default function UseCasesSection() {
 
             {/* Components Table (Visible on lg and up within this column) */}
             {isLargeScreen && (
-              <div className="relative" style={{minHeight: "400px"}}>
+              <div className="relative" style={{minHeight: "400px",textAlign:'center',justifyContent:'center',alignItems:'center', display:'flex'}}>
                 <div className={`bg-white shadow-sm overflow-hidden transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`} style={{border: "1px solid #000000"}}>
                   {/* Table Header */}
                   <div className="grid grid-cols-4 bg-[#13b5ea] text-white">
@@ -178,28 +178,44 @@ export default function UseCasesSection() {
           </div>
 
           {/* Right - Image (always visible) */}
-          <div className="flex flex-col justify-center items-center mt-10 lg:mt-0 lg:justify-end">
+          <div className="flex flex-col justify-center items-center mt-10 lg:mt-0 lg:justify-end  lg:border-l lg:border-b-0  border-[#000000]">
             <div className="relative w-full flex justify-center">
               {/* Main Image */}
               <div className="relative w-full flex justify-center">
                 <Image
-                  src={selectedUseCase === "FAN ENGAGEMENT" ? "/images/fan_engagement.png" :
-                       selectedUseCase === "TRUSTLESS TOURNAMENTS" ? "/images/wbl_tms.png" :
-                       "/images/Prediction.png"}
+                  src={
+                    isSmallScreen
+                      ? (selectedUseCase === "FAN ENGAGEMENT"
+                          ? "/images/fan_engangement_full.png"
+                          : selectedUseCase === "TRUSTLESS TOURNAMENTS"
+                            ? "/images/wbl_tms_full.png"
+                            : "/images/Prediction.png")
+                      : (selectedUseCase === "FAN ENGAGEMENT"
+                          ? "/images/fan_engagement.png"
+                          : selectedUseCase === "TRUSTLESS TOURNAMENTS"
+                            ? "/images/wbl_tms.png"
+                            : "/images/Prediction.png")
+                  }
                   alt={`${selectedUseCase} Interface`}
                   width={800}
                   height={1000}
-                  className={`transition-all duration-500 w-full h-auto object-contain ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+                  className={`transition-all duration-500 mt-24 w-full h-auto object-contain ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
                 />
               </div>
             </div>
             {/* Learn More/View Less Button for Mobile */}
              {isSmallScreen && (
                <div
-                 className="mt-8 text-[#13b5ea] cursor-pointer flex items-center"
-                 onClick={() => setShowTableOnMobile(!showTableOnMobile)}
+                 className="block lg:hidden w-full mb-8"
                >
-                 {showTableOnMobile ? 'View Less ↑' : 'Learn More ↓'}
+                 <button
+                   className="w-full flex justify-center items-center py-4 rounded-none text-[1.4rem] font-normal text-[#4d4d4d]  shadow-none border-none focus:outline-none"
+                   style={{letterSpacing: '-1px'}}
+                   onClick={() => setShowTableOnMobile(!showTableOnMobile)}
+                 >
+                   <span className="mr-2">Learn More</span>
+                   <img src="/images/down_arrow.svg" alt="down arrow" className="w-8 h-8" />
+                 </button>
                </div>
              )}
           </div>

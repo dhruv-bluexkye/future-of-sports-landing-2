@@ -39,20 +39,23 @@ export default function Navbar() {
         >
           Council
         </Link>
-        <button
-          className="bg-[#000000] text-white hover-button px-6 py-2.5 text-sm transition-all duration-300"
+        <Link
+          href="https://m7colx7q799.typeform.com/to/vDVE1qlB"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#000000] text-white hover-button px-6 py-2.5 text-sm transition-all duration-300 flex items-center justify-center"
           style={{ fontWeight: 500 }}
         >
           Request Access
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden">
+      <div className="md:hidden z-[200]">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="p-2 focus:outline-none hamburger-button bg-white/80"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
         >
           <span className="sr-only">Open menu</span>
           <div className={`hamburger ${isMenuOpen ? "active" : ""}`}>
@@ -79,26 +82,6 @@ export default function Navbar() {
               <Link href="/">
                 <Image src="/images/fsp-logo.svg" alt="FSP Logo" width={80} height={80} className="w-20 h-20" />
               </Link>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="p-2 focus:outline-none"
-                aria-label="Close menu"
-              >
-                <svg
-                  className="w-6 h-6 text-gray-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
             </div>
             <div className="px-6 py-6 space-y-6 flex-1">
               <Link
@@ -117,13 +100,16 @@ export default function Navbar() {
               >
                 Council
               </Link>
-              <button
-                className="w-full bg-[#000000] text-white hover-button px-6 py-3 text-base mt-4 transition-all duration-300"
+              <Link
+                href="https://m7colx7q799.typeform.com/to/vDVE1qlB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#000000] text-white hover-button px-6 py-3 text-base mt-4 transition-all duration-300 flex items-center justify-center"
                 style={{ fontWeight: 500 }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Request Access
-              </button>
+              </Link>
             </div>
           </div>
         </div>

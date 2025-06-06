@@ -114,7 +114,7 @@ export default function CouncilMembers() {
                 </div>
 
                 {/* Portrait */}
-                <div className="bg-[#6B9EFF]" style={{ borderTop: "30px solid #13b5ea", borderLeft: "30px solid #13b5ea", borderRight: "30px solid #13b5ea" }}>
+                <div className="bg-[#6B9EFF]" style={{ borderTop: "30px solid #80ABFF", borderLeft: "30px solid #80ABFF", borderRight: "30px solid #80ABFF" }}>
                   <div
                     className="aspect-[4/3.7] overflow-hidden"
                   >

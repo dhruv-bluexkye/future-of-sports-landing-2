@@ -26,9 +26,15 @@ export default function CouncilHero() {
           A members-only council of elite athletes, owners & innovators advancing sport worldwide.
         </h1>
 
-        <Button className="bg-[#13b5ea] hover:bg-[#0073e6] text-white px-8 py-3 text-base" style={{ fontWeight: 500 }}>
+        <a
+          href="https://m7colx7q799.typeform.com/to/vDVE1qlB"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#13b5ea] hover:bg-[#0073e6] text-white px-8 py-3 text-base inline-block mt-4"
+          style={{ fontWeight: 500 }}
+        >
           Request Invite
-        </Button>
+        </a>
       </main>
     </div>
   )

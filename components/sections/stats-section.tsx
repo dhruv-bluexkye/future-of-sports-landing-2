@@ -1,13 +1,13 @@
 export default function StatsSection() {
   return (
-    <section className="py-20 px-6 lg:px-12 bg-white relative overflow-hidden">
+    <section className="py-20 px-6 lg:px-12 bg-white relative overflow-hidden " style={{background: 'none'}}>
       {/* Background Gradient Placeholder */}
 
       {/* Adjusted grid for mobile stacking and desktop columns */}
       <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
         {/* Left Content: Text and Stats (Order adjusted for mobile) */}
         <div className="order-1 lg:order-1">
-          <h2 className="text-4xl lg:text-5xl font-semibold text-[#4d4d4d] mb-8 leading-tight">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-[#4d4d4d] mb-8 leading-tight">
             In the age of AI, FSP is a network of real athletes and
            
             fans, secured by verifiable proof-of-play and a borderless

@@ -8,41 +8,41 @@ export default function CouncilContent() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image Collage */}
           <div className="relative">
-            <div className="grid grid-cols-12 gap-4">
-              {/* Top Left - Large Image */}
-              <div className="col-span-12 sm:col-span-7 row-span-1">
+            <div className="grid grid-cols-12 gap-2 sm:gap-4">
+              {/* Top Row - Two Images Side by Side */}
+              <div className="col-span-6 sm:col-span-7 z-20">
                 <Image
                   src="/images/image-1.jpg"
                   alt="Athletes Portrait"
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover rounded-2xl shadow-xl"
+                  style={{ aspectRatio: '1/1.1' }}
                 />
               </div>
-
-              {/* Top Right - Portrait */}
-              <div className="col-span-12 sm:col-span-5 mt-4 sm:mt-10 row-span-1 overflow-hidden">
+              <div className="col-span-6 sm:col-span-5 z-30">
                 <Image
                   src="/images/image-3.jpg"
                   alt="Athlete Portrait"
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover rounded-2xl shadow-lg "
+                  style={{ aspectRatio: '1/1.1' }}
                 />
               </div>
-
-              {/* Bottom - Team Photo */}
-              <div className="col-span-12 -mt-20 flex justify-center">
-                <div className="w-full h-full">
+              {/* Bottom - Team Photo (overlapping top row) */}
+              <div className="col-span-12  sm:-mt-12 flex justify-center z-10">
+                <div className="w-11/12 sm:w-10/12">
                   <Image
                     src="/images/image-2.jpg"
                     alt="Team Photo"
                     width={0}
                     height={0}
                     sizes="100vw"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover rounded-2xl shadow-2xl "
+                    style={{ aspectRatio: '2.2/1' }}
                   />
                 </div>
               </div>
