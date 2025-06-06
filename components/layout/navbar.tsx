@@ -79,7 +79,26 @@ export default function Navbar() {
               <Link href="/">
                 <Image src="/images/fsp-logo.svg" alt="FSP Logo" width={80} height={80} className="w-20 h-20" />
               </Link>
-              <div className="w-12"></div>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 focus:outline-none"
+                aria-label="Close menu"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
             <div className="px-6 py-6 space-y-6 flex-1">
               <Link

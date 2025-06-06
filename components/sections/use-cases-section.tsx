@@ -94,9 +94,9 @@ export default function UseCasesSection() {
   }
 
   return (
-    <section className="py-20 px-0">
+    <section className="py-20">
       <div className="w-full">
-        <h2 className="text-4xl lg:text-5xl font-semibold text-[#4d4d4d] mb-16 text-center px-6 lg:px-12">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-[#4d4d4d] mb-16 text-center">
           Header For Use
           <br />
           Cases Section
@@ -104,34 +104,34 @@ export default function UseCasesSection() {
 
         <div className="grid lg:grid-cols-2 gap-0 items-start" style={{border: "1px solid #000000"}}>
           {/* Left - Use Cases and Description (always visible) */}
-          <div className="space-y-8 lg:border-r lg:border-b-0 border-b border-[#000000]" style={{padding: "40px 50px"}}>
+          <div className="space-y-8 lg:border-r lg:border-b-0 border-b border-[#000000]" style={{padding: "40px 0"}}>
             {/* Use Cases Tags */}
             <div className="mb-4">
               <h3 className="text-base sm:text-lg font-medium text-[#4d4d4d] mb-4">Use Cases</h3>
               <div className="grid grid-cols-6" style={{ border: "1px solid #000000" }}>
                 <div
-                  className={`px1 py-1 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-3 cursor-pointer transition-all duration-300 ${selectedUseCase === "TRUSTLESS TOURNAMENTS" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
+                  className={`py-1 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-3 cursor-pointer transition-all duration-300 ${selectedUseCase === "TRUSTLESS TOURNAMENTS" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
                   style={{borderRight: "1px solid #000000", borderBottom: "1px solid #000000"}}
                   onClick={() => handleManualUseCaseClick("TRUSTLESS TOURNAMENTS")}
                 >
                   TRUSTLESS TOURNAMENTS
                 </div>
                 <div
-                  className={`px-1 py-1 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-3 cursor-pointer transition-all duration-300 ${selectedUseCase === "ON-CHAIN PREDICTION MKT" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
+                  className={`py-1 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-3 cursor-pointer transition-all duration-300 ${selectedUseCase === "ON-CHAIN PREDICTION MKT" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
                   style={{borderBottom: "1px solid #000000"}}
                   onClick={() => handleManualUseCaseClick("ON-CHAIN PREDICTION MKT")}
                 >
                   ON-CHAIN PREDICTION MKT
                 </div>
                 <div
-                  className={`px-1 py-1 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-2 cursor-pointer transition-all duration-300 ${selectedUseCase === "FAN ENGAGEMENT" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
+                  className={`py-1 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-2 cursor-pointer transition-all duration-300 ${selectedUseCase === "FAN ENGAGEMENT" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
                   style={{borderRight: "1px solid #000000"}}
                   onClick={() => handleManualUseCaseClick("FAN ENGAGEMENT")}
                 >
                   FAN ENGAGEMENT
                 </div>
                 <div
-                  className={`px-1 py-1 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-4 cursor-pointer transition-all duration-300 ${selectedUseCase === "TOKENIZED EQUITY & ON-CHAIN YIELD" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
+                  className={`py-1 sm:py-3 text-xs sm:text-sm font-medium text-center col-span-4 cursor-pointer transition-all duration-300 ${selectedUseCase === "TOKENIZED EQUITY & ON-CHAIN YIELD" ? "bg-[#13b5ea] text-white" : "bg-[#FFFFFF] text-black"}`}
                   onClick={() => handleManualUseCaseClick("TOKENIZED EQUITY & ON-CHAIN YIELD")}
                 >
                   TOKENIZED EQUITY & ON-CHAIN YIELD
@@ -155,18 +155,18 @@ export default function UseCasesSection() {
                 <div className={`bg-white shadow-sm overflow-hidden transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`} style={{border: "1px solid #000000"}}>
                   {/* Table Header */}
                   <div className="grid grid-cols-4 bg-[#13b5ea] text-white">
-                    <div className="px-4 py-3 font-medium text-sm" style={{borderRight: "1px solid #000000", borderBottom: "1px solid #000000"}}>Component</div>
-                    <div className="px-4 py-3 font-medium text-sm col-span-3" style={{borderBottom: "1px solid #000000"}}>Description</div>
+                    <div className="py-3 font-medium text-sm" style={{borderRight: "1px solid #000000", borderBottom: "1px solid #000000"}}>Component</div>
+                    <div className="py-3 font-medium text-sm col-span-3" style={{borderBottom: "1px solid #000000"}}>Description</div>
                   </div>
 
                   {/* Table Rows */}
                   <div>
                     {useCaseData[selectedUseCase].components.map((component, index) => (
                       <div key={index} className="grid grid-cols-4">
-                        <div className="px-4 py-4 bg-[#13b5ea] text-white font-medium text-sm" style={{borderRight: "1px solid #000000", borderBottom: index !== useCaseData[selectedUseCase].components.length - 1 ? "1px solid #000000" : "none"}}>
+                        <div className="py-4 bg-[#13b5ea] text-white font-medium text-sm" style={{borderRight: "1px solid #000000", borderBottom: index !== useCaseData[selectedUseCase].components.length - 1 ? "1px solid #000000" : "none"}}>
                           {component.name}
                         </div>
-                        <div className="px-4 py-4 text-sm text-gray-700 leading-relaxed col-span-3" style={{borderBottom: index !== useCaseData[selectedUseCase].components.length - 1 ? "1px solid #000000" : "none"}}>
+                        <div className="py-4 text-sm text-gray-700 leading-relaxed col-span-3" style={{borderBottom: index !== useCaseData[selectedUseCase].components.length - 1 ? "1px solid #000000" : "none"}}>
                           {component.description}
                         </div>
                       </div>
@@ -178,10 +178,10 @@ export default function UseCasesSection() {
           </div>
 
           {/* Right - Image (always visible) */}
-          <div className="flex flex-col justify-center items-center lg:justify-end mt-10 lg:mt-0">
-            <div className="relative w-full flex justify-center lg:justify-end">
+          <div className="flex flex-col justify-center items-center mt-10 lg:mt-0 lg:justify-end">
+            <div className="relative w-full flex justify-center">
               {/* Main Image */}
-              <div className="relative">
+              <div className="relative w-full flex justify-center">
                 <Image
                   src={selectedUseCase === "FAN ENGAGEMENT" ? "/images/fan_engagement.png" :
                        selectedUseCase === "TRUSTLESS TOURNAMENTS" ? "/images/wbl_tms.png" :
@@ -189,7 +189,7 @@ export default function UseCasesSection() {
                   alt={`${selectedUseCase} Interface`}
                   width={800}
                   height={1000}
-                  className={`transition-all duration-500 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+                  className={`transition-all duration-500 w-full h-auto object-contain ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
                 />
               </div>
             </div>

@@ -8,12 +8,12 @@ import Navbar from "@/components/layout/navbar"
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full overflow-x-hidden">
       <Navbar />
       <div className="animate-fadeIn">
         <HeroSection />
         <div
-          className="relative w-full h-72 -mt-24 -mb-24 z-20"
+          className="relative w-full h-72 -mt-100 -mb-60 z-20"
           style={{
             opacity: "0.7",
           }}
@@ -29,7 +29,7 @@ export default function Home() {
         <UseCasesSection />
         <StatsSection />
         <div
-          className="relative w-full h-72 -mt-20 -mb-10 z-20"
+          className="relative w-full h-72 -mt-20 mb-0 z-20"
           style={{
             opacity: "0.7",
           }}

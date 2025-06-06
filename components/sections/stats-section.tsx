@@ -26,49 +26,45 @@ export default function StatsSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {/* Stat 1: Athletes */}
             <div className="flex flex-col items-start">
-              <div className="flex items-center mb-2">
-                {/* Using runner.svg as icon */}
+              <div className="flex items-center">
                 <img src="/images/runner_icon.svg" alt="Runner icon" className="w-10 h-10 mr-4" />
                 <div>
-                 <span className="text-4xl font-semibold text-[#4d4d4d]">7 Million +</span>
-                 <p className="text-gray-600 font-regular text-xl">Athletes</p>
+                  <span className="text-4xl font-semibold text-[#4d4d4d]">7 Million +</span>
+                  <p className="text-gray-600 font-regular text-xl">Athletes</p>
                 </div>
               </div>
             </div>
 
             {/* Stat 2: Countries */}
             <div className="flex flex-col items-start">
-              <div className="flex items-center mb-2">
-                 {/* Using runner.svg as icon - replace with world icon if available */}
+              <div className="flex items-center">
                 <img src="/images/runner_icon.svg" alt="World icon" className="w-10 h-10 mr-4" />
                 <div>
-                 <span className="text-4xl font-semibold text-[#4d4d4d]">115+</span>
-                 <p className="text-gray-600 font-regular text-xl">Countries</p>
+                  <span className="text-4xl font-semibold text-[#4d4d4d]">115+</span>
+                  <p className="text-gray-600 font-regular text-xl">Countries</p>
                 </div>
               </div>
             </div>
 
             {/* Stat 3: Federations */}
             <div className="flex flex-col items-start">
-              <div className="flex items-center mb-2">
-                 {/* Using runner.svg as icon - replace with trophy icon if available */}
+              <div className="flex items-center">
                 <img src="/images/runner_icon.svg" alt="Trophy icon" className="w-10 h-10 mr-4" />
                 <div>
-                 <span className="text-4xl font-semibold text-[#4d4d4d]">240+</span>
-                 <p className="text-gray-600 font-regular text-xl">Federations</p>
+                  <span className="text-4xl font-semibold text-[#4d4d4d]">240+</span>
+                  <p className="text-gray-600 font-regular text-xl">Federations</p>
                 </div>
               </div>
             </div>
 
             {/* Stat 4: Participants */}
             <div className="flex flex-col items-start">
-              <div className="flex items-center mb-2">
-                 {/* Using runner.svg as icon - replace with group icon if available */}
+              <div className="flex items-center">
                 <img src="/images/runner_icon.svg" alt="Group icon" className="w-10 h-10 mr-4" />
-                <div>
-                 <span className="text-4xl font-semibold text-[#4d4d4d]">150 Million+</span>
-                 <p className="text-gray-600 font-regular text-xl">Participants</p>
-                 </div>
+                <div className="whitespace-nowrap">
+                  <span className="text-3xl font-semibold text-[#4d4d4d]">150 Million+</span>
+                  <p className="text-gray-600 font-regular text-xl">Participants</p>
+                </div>
               </div>
             </div>
           </div>
@@ -79,7 +75,7 @@ export default function StatsSection() {
           <img
             src="/images/globe.png"
             alt="Global sports network represented by a globe"
-            width={560} // Adjust width and height as needed
+            width={560}
             height={560}
             className="object-contain"
           />

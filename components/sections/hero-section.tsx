@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Navbar from "@/components/layout/navbar"
+import Link from "next/link"
 
 export default function HeroSection() {
   return (
@@ -21,7 +22,7 @@ export default function HeroSection() {
       
 
       {/* Main Content */}
-      <main className="relative z-10 flex flex-col items-center justify-center px-6 py-20 lg:py-32 text-center max-w-7xl mx-auto min-h-screen">
+      <main className="relative z-10 flex flex-col items-center justify-center px-6 lg:px-12 py-20 lg:py-32 text-center max-w-7xl mx-auto min-h-screen">
         {/* Main Headline */}
         <h1
           className="text-5xl md:text-7xl lg:text-8xl text-[#4d4d4d] leading-[0.9] mb-12 tracking-tight"
@@ -31,7 +32,7 @@ export default function HeroSection() {
           <br />
           Global Scale,
           <br />
-          Economic Value.
+          Economic Value
         </h1>
 
         {/* Subtitle */}
@@ -44,12 +45,18 @@ export default function HeroSection() {
         </p>
 
         {/* CTA Button */}
-        <button
-          className="gradient-button px-10 py-4 text-lg text-white transition-all duration-300"
-          style={{ fontWeight: 500 }}
+        <Link 
+          href="https://m7colx7q799.typeform.com/to/vDVE1qlB"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Request Invite
-        </button>
+          <button
+            className="gradient-button px-10 py-4 text-lg text-white transition-all duration-300"
+            style={{ fontWeight: 500 }}
+          >
+            Request Invite
+          </button>
+        </Link>
       </main>
     </div>
   )

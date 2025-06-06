@@ -22,12 +22,14 @@ export default function Footer() {
         </div>
 
         {/* Explore Links */}
-        <div>
-          <h4 className="text-gray-500 text-sm font-semibold mb-4">Explore</h4>
-          <ul className="space-y-2">
-            <li><Link href="/" className="text-[#4d4d4d] hover:underline">Home</Link></li>
-            <li><Link href="/council" className="text-[#4d4d4d] hover:underline">Council</Link></li>
-          </ul>
+        <div className="flex justify-end">
+          <div>
+            <h4 className="text-gray-500 text-sm font-semibold mb-4">Explore</h4>
+            <ul className="space-y-3">
+              <li><Link href="/" className="text-[#4d4d4d] hover:underline text-lg">Home</Link></li>
+              <li><Link href="/council" className="text-[#4d4d4d] hover:underline text-lg">Council</Link></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

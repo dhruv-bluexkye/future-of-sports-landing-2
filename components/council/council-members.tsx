@@ -84,18 +84,18 @@ export default function CouncilMembers() {
               // Render a standard council member item
               <div
                 key={index}
-                className={`pr-20 pl-20 pt-20 ${index % 2 === 0 ? 'border-r border-black' : ''}`}
+                className={`px-0 pt-6 pb-0 md:px-20 md:pt-20 ${index % 2 === 0 ? 'md:border-r md:border-black' : ''}`}
                 style={{
                   borderBottom: "1px solid black",
-                  borderRight: "1px solid black",
+                  borderRight: index % 2 === 0 ? "1px solid black" : "none",
                 }}
               >
                 {/* Info Card */}
-                <div className="bg-white p-6">
+                <div className="bg-white p-0 px-0 md:px-0">
                   {/* Flex container for name/title and description - column on mobile, row on desktop */}
-                  <div className="flex flex-col md:flex-row items-start md:justify-between mb-4">
+                  <div className="flex flex-col md:flex-row items-start md:justify-between mb-4 px-4 md:px-0">
                     {/* Name and Title block */}
-                    <div className="mb-6 md:mb-0"> {/* Added bottom margin for mobile */}
+                    <div className="mb-6 md:mb-0">
                       <p className="text-xs text-gray-500 mb-1">//COUNCIL</p>
                       <h3 className="text-2xl text-[#4d4d4d] mb-2" style={{ fontWeight: 600, whiteSpace: 'pre-wrap' }}>
                         {item.name}
@@ -105,7 +105,7 @@ export default function CouncilMembers() {
                       </div>
                     </div>
                     {/* Description block */}
-                    <div className="text-left md:text-right w-full md:w-auto"> {/* Adjusted text alignment and width for mobile */}
+                    <div className="text-left md:text-right w-full md:w-auto">
                       <p className="text-sm text-gray-600 mt-4 md:mt-0 max-w-xs leading-relaxed" style={{ whiteSpace: 'pre-wrap' }}>
                         {item.description}
                       </p>
@@ -114,9 +114,9 @@ export default function CouncilMembers() {
                 </div>
 
                 {/* Portrait */}
-                <div className="bg-[#6B9EFF]">
+                <div className="bg-[#6B9EFF]" style={{ borderTop: "30px solid #13b5ea", borderLeft: "30px solid #13b5ea", borderRight: "30px solid #13b5ea" }}>
                   <div
-                    className="aspect-[4/3.7] overflow-hidden pt-4 pl-4 pr-4  md:pt-20 md:px-12"
+                    className="aspect-[4/3.7] overflow-hidden"
                   >
                     <Image
                       src={item.image as string}
@@ -132,12 +132,12 @@ export default function CouncilMembers() {
               // Render the special logo/content item spanning two columns
               <div key={index} className="md:col-span-2 grid md:grid-cols-2 gap-0 border-b border-black">
                 {/* Left side - Pattern and Logo */}
-                <div className="relative flex items-center justify-center p-10 border-r border-black"
+                <div className="relative flex items-center justify-center px-0 py-8 md:p-10 border-r border-black"
                   style={{
                     background: `repeating-linear-gradient(0deg, transparent, transparent 79px, #ccc 80px),
                                  repeating-linear-gradient(90deg, transparent, transparent 79px, #ccc 80px)`,
-                    backgroundColor: '#fff', // Set background color to white
-                    backgroundSize: '80px 80px', // Size of each square in the grid
+                    backgroundColor: '#fff',
+                    backgroundSize: '80px 80px',
                   }}
                 >
                   <Image
@@ -146,15 +146,16 @@ export default function CouncilMembers() {
                     width={400}
                     height={400}
                     style={{
-                     minWidth: '500px',
-                      height: '500px',
+                     minWidth: 'auto',
+                      height: 'auto',
+                      maxWidth: '100%',
                     }}  
                     className="relative z-10"
                   />
                 </div>
 
                 {/* Right side - Content */}
-                <div className="bg-white p-6 flex flex-col justify-center pr-20 pl-20 pt-20 pb-20">
+                <div className="bg-white px-0 py-8 md:p-20 flex flex-col justify-center">
                   <p className="text-xs text-gray-500 mb-1">//COUNCIL</p>
                   <h3 className="text-3xl text-[#4d4d4d] mb-4" style={{ fontWeight: 600, whiteSpace: 'pre-wrap' }}>
                     {item.name}

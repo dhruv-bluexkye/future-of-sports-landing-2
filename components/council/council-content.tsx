@@ -10,41 +10,39 @@ export default function CouncilContent() {
           <div className="relative">
             <div className="grid grid-cols-12 gap-4">
               {/* Top Left - Large Image */}
-              <div className="col-span-7 row-span-1">
+              <div className="col-span-12 sm:col-span-7 row-span-1">
                 <Image
                   src="/images/image-1.jpg"
                   alt="Athletes Portrait"
-                  width={400}
-                  height={300}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                   className="w-full h-auto object-cover"
                 />
               </div>
 
               {/* Top Right - Portrait */}
-              <div className="col-span-5 mt-10 row-span-1 overflow-hidden">
+              <div className="col-span-12 sm:col-span-5 mt-4 sm:mt-10 row-span-1 overflow-hidden">
                 <Image
                   src="/images/image-3.jpg"
                   alt="Athlete Portrait"
-                  width={200}
-                  height={300}
-                  className="w-full h-full object-cover"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-full h-auto object-cover"
                 />
               </div>
 
               {/* Bottom - Team Photo */}
-              <div className="col-span-12 -mt-20">
+              <div className="col-span-12 -mt-20 flex justify-center">
                 <div className="w-full h-full">
                   <Image
                     src="/images/image-2.jpg"
                     alt="Team Photo"
-                    width={230}
-                    style={{
-                      marginTop: "10px",
-                      marginLeft: "110px",
-                      alignSelf: "right",
-                    }}
-                    height={10}
-                    className=" object-fill"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>

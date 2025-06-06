@@ -21,7 +21,7 @@ export default function BuildingSection() {
             <img
               src="/images/stack.svg"
               alt="Architectural stack diagram"
-              style={{width: "100%", height: "100%"}}
+              style={{width: "100%", height: "110%"}}
               className="object-contain"
             />
           </div>
